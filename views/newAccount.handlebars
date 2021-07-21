@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-sm-4">
+        <form action="/signup" method="POST">
+            {{#each errors}}
+            <div class="altert alert-danger" role="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{text}}
+            </div>
+            {{/each}}
+            <div class="mb-3">
+                <label for="username" class="form-label">Fullname</label>
+                <input type="text" name="username" class="form-control" value="{{fullname}}" required>
+            </div>
+            <div class=" mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" value="{{email}}" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" value="{{password}}" required>
+            </div>
+            <div class="mb-3">
+                <label for="password2" class="form-label">Confirm Password</label>
+                <input type="password" name="password2" class="form-control" value="{{password2}}" required>
+            </div>
+            <button type="submit" class="btn btn-danger">SignUp</button>
+        </form>
+    </div>
+</div>
